@@ -1,5 +1,0 @@
-robotframework
-robotframework-seleniumlibrary
-selenium
-webdriver-manager
-allure-robotframework

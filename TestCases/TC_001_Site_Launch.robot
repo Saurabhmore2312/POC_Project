@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    ../TestBase/BaseClass.py
+Library    ../Utils/ScreenshotListener.py
 
 *** Test Cases ***
 Open Browser From Config

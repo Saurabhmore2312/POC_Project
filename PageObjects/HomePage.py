@@ -83,7 +83,7 @@ class HomePage:
         if status:
             BuiltIn().log("Iphone is visible in Quick Access Cart", "INFO")
         else:
-            BuiltIn().log("Iphone is not visible in Quick Access Cart", "WARN")
+            BuiltIn().fail("Iphone is not visible in Quick Access Cart  — failing the test case")
         return status
 
     @keyword
@@ -92,7 +92,7 @@ class HomePage:
         if status:
             BuiltIn().log("Macbook is visible in Quick Access Cart", "INFO")
         else:
-            BuiltIn().log("Macbook is not visible in Quick Access Cart", "WARN")
+            BuiltIn().fail("Macbook is not visible in Quick Access Cart  — failing the test case")
         return status
 
     @keyword
@@ -100,9 +100,10 @@ class HomePage:
         status = BuiltIn().run_keyword_and_return_status("Page Should Contain Element", self.link_logout)
         if status:
             BuiltIn().log("Logout link is visible", "INFO")
+            return status
         else:
-            BuiltIn().log("Logout link is not visible", "WARN")
-        return status
+            BuiltIn().fail("Logout link is NOT visible — failing the test case")
+            return status
 
     @keyword
     def check_if_quick_access_cart_is_empty(self):
@@ -110,5 +111,5 @@ class HomePage:
         if status:
             BuiltIn().log("Quick Access Cart is empty", "INFO")
         else:
-            BuiltIn().log("Quick Access Cart is not empty", "WARN")
+            BuiltIn().fail("Quick Access Cart is not empty — failing the test case")
         return status

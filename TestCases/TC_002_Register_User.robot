@@ -4,9 +4,10 @@ Library    String
 Library    ../TestBase/BaseClass.py
 Library    ../PageObjects/HomePage.py
 Library    ../PageObjects/AccountRegisterPage.py
+Library    ../Utils/ScreenshotListener.py
 
 Test Setup        Open Application
-Test Teardown     Close Browser
+Test Teardown    Run Keywords    Capture Screenshot On Failure    AND    Close Browser
 
 *** Variables ***
 ${URL}

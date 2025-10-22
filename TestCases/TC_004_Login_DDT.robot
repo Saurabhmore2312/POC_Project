@@ -4,6 +4,7 @@ Library  String
 Library  ../TestBase/BaseClass.py
 Library  ../PageObjects/HomePage.py
 Library  ../PageObjects/LoginPage.py
+Library    ../Utils/ScreenshotListener.py
 
 *** Variables ***
 ${URL}
@@ -36,4 +37,5 @@ Perform Login
     Click Account
     Sleep    1s
     Logout Is Visible
+    Capture Screenshot On Failure
     Close Browser

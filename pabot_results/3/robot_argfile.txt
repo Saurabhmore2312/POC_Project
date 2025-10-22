@@ -1,0 +1,16 @@
+--suite TestCases.TC 004 Login DDT
+--variable CALLER_ID:031916929d164ed686cc4052452e9688
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:9
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:3
+--variable PABOTLASTLEVEL:TestCases.TC 004 Login DDT
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\3
+--consolecolors off
+--consolemarkers off
+TestCases/

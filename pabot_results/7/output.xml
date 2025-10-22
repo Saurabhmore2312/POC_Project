@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-22T15:25:36.161696" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\POC_Project2\TestCases">
+<suite id="s1-s1" name="TC 008 Remove Product From Cart" source="E:\POC_Project2\TestCases\TC_008_Remove_Product_From_Cart.robot">
+<test id="s1-s1-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.707325" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.706353" elapsed="0.001067"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.708279" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.707811" elapsed="0.000547"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.710140" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.708894" elapsed="18.493224"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:55.332223" elapsed="0.522766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:57.088342" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:55.855628" elapsed="1.574115"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.704718" elapsed="20.847711"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:57.669621" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:57.668531" elapsed="0.001254"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:57.676065" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:57.670141" elapsed="0.006729"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:57.684742" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:57.678885" elapsed="3.484377"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:02.253422" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.163815" elapsed="1.090982"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:02.363602" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:02.255374" elapsed="2.443165"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:04.699540" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:04.698904" elapsed="3.637559"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.337434" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.336883" elapsed="1.107468"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.445747" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.444781" elapsed="1.497172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:11.943844" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:10.942467" elapsed="1.001989"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:57.665662" elapsed="14.279207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:14.946557" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:11.945246" elapsed="3.001432"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:14.947093" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:14.946851" elapsed="0.577177"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.525839" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:15.524516" elapsed="1.001570"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:16.530164" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.526511" elapsed="1.131056"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:17.658283" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:17.657873" elapsed="2.508315"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:21.180565" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:20.166810" elapsed="1.036032"/>
+</kw>
+<kw name="Click Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:21.205341" level="INFO">Clicking element '//a[@title='Shopping Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:21.204888" elapsed="4.757136"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:26.964040" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:25.962549" elapsed="1.026770"/>
+</kw>
+<kw name="Iphone Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:27.343375" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:26.997826" elapsed="0.346408"/>
+</kw>
+<msg time="2025-10-22T15:26:27.344581" level="INFO">Iphone is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:26.990184" elapsed="0.354557"/>
+</kw>
+<kw name="Macbook Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:27.776549" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:27.346010" elapsed="0.431232"/>
+</kw>
+<msg time="2025-10-22T15:26:27.777719" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:27.345277" elapsed="0.432870"/>
+</kw>
+<kw name="Remove Iphone From Cart" owner="AddToCartPage">
+<msg time="2025-10-22T15:26:27.779622" level="INFO">Clicking element '//a[text()='iPhone']//..//..//button[@data-original-title='Remove']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:27.778608" elapsed="2.791174"/>
+</kw>
+<kw name="Remove Macbook From Cart" owner="AddToCartPage">
+<msg time="2025-10-22T15:26:30.574278" level="INFO">Clicking element '//a[text()='MacBook']//..//..//button[@data-original-title='Remove']'.</msg>
+<msg time="2025-10-22T15:26:31.658086" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</msg>
+<status status="FAIL" start="2025-10-22T15:26:30.570762" elapsed="1.614057">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-22T15:26:32.191815" elapsed="0.000567"/>
+</kw>
+<kw name="Check If Cart Is Empty" owner="AddToCartPage">
+<status status="NOT RUN" start="2025-10-22T15:26:32.205143" elapsed="0.000302"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.240956" elapsed="5.330926"/>
+</kw>
+<status status="FAIL" start="2025-10-22T15:25:36.702643" elapsed="60.869498">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-22T15:25:36.246160" elapsed="61.328815"/>
+</suite>
+<status status="FAIL" start="2025-10-22T15:25:36.213030" elapsed="61.363404"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCases" id="s1" pass="0" fail="1" skip="0">TestCases</stat>
+<stat name="TC 008 Remove Product From Cart" id="s1-s1" pass="0" fail="1" skip="0">TestCases.TC 008 Remove Product From Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

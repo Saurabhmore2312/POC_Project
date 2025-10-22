@@ -1,0 +1,54 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.TC 008 Remove Product From Cart                                     
+==============================================================================
+User Login In                                                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\POC_Project2\TestCases\TC_008_Remove_Product_From_Cart.robot:20
+    T:  User Login In    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\POC_Project2\TestCases\TC_008_Remove_Product_From_Cart.robot:33
+      Remove Macbook From Cart    
+______________________________________________________________________________
+| FAIL |
+StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+------------------------------------------------------------------------------
+TestCases.TC 008 Remove Product From Cart                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  E:\POC_Project2\pabot_results\7\output.xml

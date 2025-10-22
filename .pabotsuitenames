@@ -1,0 +1,14 @@
+datasources:e73c085421193640573fe7705be85ac985361a2b
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:4ac895219dcda62885d77bce76db95afbbe097e1
+--suite TestCases.TC 001 Site Launch
+--suite TestCases.TC 002 Register User
+--suite TestCases.TC 003 Login
+--suite TestCases.TC 004 Login DDT
+--suite TestCases.TC 005 Add To Cart
+--suite TestCases.TC 006 Add To Wishlist
+--suite TestCases.TC 007 Add To Cart Through Wishlist
+--suite TestCases.TC 008 Remove Product From Cart
+--suite TestCases.TC 009 Add To Cart Quck Access
+--suite TestCases.TC 010 Remove Product From Quick Access Cart

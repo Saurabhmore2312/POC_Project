@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-22T15:26:50.734726" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\POC_Project2\TestCases">
+<suite id="s1-s1" name="TC 001 Site Launch" source="E:\POC_Project2\TestCases\TC_001_Site_Launch.robot">
+<test id="s1-s1-t1" name="Open Browser From Config" line="6">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.616459" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.615345" elapsed="0.001214"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.617169" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.616833" elapsed="0.000413"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.618068" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.617532" elapsed="18.591279"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:56.736967" elapsed="1.107498"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:02.933952" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:57.845132" elapsed="5.120313"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:03.228001" level="INFO">Page title is 'Your Store'.</msg>
+<arg>Your Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.966194" elapsed="0.266675"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:03.233824" elapsed="10.921553"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.613773" elapsed="37.543565"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.186000" elapsed="37.543000"/>
+</suite>
+<suite id="s1-s2" name="TC 002 Register User" source="E:\POC_Project2\TestCases\TC_002_Register_User.robot">
+<test id="s1-s2-t1" name="User Registration With Random Data" line="16">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.669075" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.667628" elapsed="0.001545"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.669895" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.669511" elapsed="0.000450"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.670727" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.670230" elapsed="21.080728"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:57.763571" elapsed="0.693384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.491181" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.458131" elapsed="3.033601"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.665852" elapsed="24.831067"/>
+</kw>
+<kw name="Generate Test Data">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-22T15:26:01.606789" level="INFO">${USERNAME} = BXIxkWDC</msg>
+<var>${USERNAME}</var>
+<arg>8</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.601141" elapsed="0.006317"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-22T15:26:01.608635" level="INFO">${LASTNAME} = LwctnQ</msg>
+<var>${LASTNAME}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.607907" elapsed="0.000799"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-22T15:26:01.616537" level="INFO">${RAND_EMAIL} = iRjvsg</msg>
+<var>${RAND_EMAIL}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.609074" elapsed="0.007675"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.622373" level="INFO">${EMAIL} = BXIxkWDC_iRjvsg@example.com</msg>
+<var>${EMAIL}</var>
+<arg>${USERNAME}_${RAND_EMAIL}@example.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.618269" elapsed="0.004206"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-22T15:26:01.625678" level="INFO">${PASSWORD} = XDDppMzYUs</msg>
+<var>${PASSWORD}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.622950" elapsed="0.002852"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-22T15:26:01.627788" level="INFO">${PHONE} = 8986854460</msg>
+<var>${PHONE}</var>
+<arg>10</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.626653" elapsed="0.001218"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.630163" level="INFO">${USERNAME} = BXIxkWDC</msg>
+<arg>${USERNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.628600" elapsed="0.001725"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.632253" level="INFO">${LASTNAME} = LwctnQ</msg>
+<arg>${LASTNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.630719" elapsed="0.001738"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.633823" level="INFO">${EMAIL} = BXIxkWDC_iRjvsg@example.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.632922" elapsed="0.001203"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.635142" level="INFO">${PASSWORD} = XDDppMzYUs</msg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.634474" elapsed="0.000790"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-22T15:26:01.636099" level="INFO">${PHONE} = 8986854460</msg>
+<arg>${PHONE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.635625" elapsed="0.000586"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:01.598602" elapsed="0.037791"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:01.689907" level="INFO">Page title is 'Your Store'.</msg>
+<arg>Your Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.636713" elapsed="0.053418"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:01.691646" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:01.690513" elapsed="1.273557"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:04.983947" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.964560" elapsed="2.019821"/>
+</kw>
+<kw name="Click Register" owner="HomePage">
+<msg time="2025-10-22T15:26:04.985756" level="INFO">Clicking element '//a[text()='Register']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:04.984852" elapsed="1.946167"/>
+</kw>
+<kw name="Enter Firstname" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:06.932611" level="INFO">Typing text 'BXIxkWDC' into text field 'id=input-firstname'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:06.931588" elapsed="0.402266"/>
+</kw>
+<kw name="Enter Lastname" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:07.334608" level="INFO">Typing text 'LwctnQ' into text field 'id=input-lastname'.</msg>
+<arg>${LASTNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:07.334199" elapsed="0.204610"/>
+</kw>
+<kw name="Enter Email" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:07.539224" level="INFO">Typing text 'BXIxkWDC_iRjvsg@example.com' into text field 'id=input-email'.</msg>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2025-10-22T15:26:07.538969" elapsed="0.771745"/>
+</kw>
+<kw name="Enter Phone Number" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:08.313731" level="INFO">Typing text '8986854460' into text field 'id=input-telephone'.</msg>
+<arg>${PHONE}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.311211" elapsed="0.908635"/>
+</kw>
+<kw name="Enter Password" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:09.220790" level="INFO">Typing text 'XDDppMzYUs' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:09.220259" elapsed="0.866699"/>
+</kw>
+<kw name="Enter Cfm Password" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:10.088170" level="INFO">Typing text 'XDDppMzYUs' into text field 'id=input-confirm'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:10.087441" elapsed="1.147142"/>
+</kw>
+<kw name="Click Agree" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:11.235566" level="INFO">Clicking element '//input[@name='agree']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:11.235026" elapsed="0.680523"/>
+</kw>
+<kw name="Click Continue" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:11.917543" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:11.916287" elapsed="1.690332"/>
+</kw>
+<kw name="Get Confirmation Message" owner="AccountRegisterPage">
+<msg time="2025-10-22T15:26:13.821011" level="INFO">${msg} = Your Account Has Been Created!</msg>
+<var>${msg}</var>
+<status status="PASS" start="2025-10-22T15:26:13.607098" elapsed="0.214021"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Your Account Has Been Created!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.821434" elapsed="0.000832"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.823358" elapsed="2.576167"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.664773" elapsed="39.734995"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.220697" elapsed="40.183113"/>
+</suite>
+<suite id="s1-s3" name="TC 003 Login" source="E:\POC_Project2\TestCases\TC_003_Login.robot">
+<test id="s1-s3-t1" name="User Login In" line="19">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.710322" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.708462" elapsed="0.001976"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.711278" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.710821" elapsed="0.000522"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.712187" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.711647" elapsed="20.034513"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:57.447446" elapsed="0.961729"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:59.448547" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.410623" elapsed="1.052617"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.706787" elapsed="22.761500"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.784995" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:59.691532" elapsed="0.095064"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.828916" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:59.790470" elapsed="0.038540"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:59.830694" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:59.829450" elapsed="2.863525"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.833367" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.705998" elapsed="1.128178"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.835208" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.834697" elapsed="2.061954"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:05.900368" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:05.897322" elapsed="2.584393"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.482805" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.482251" elapsed="1.183372"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.666902" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.666437" elapsed="1.541438"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:12.225952" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:11.209416" elapsed="1.024983"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:12.238855" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:12.237870" elapsed="0.521192"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.765661" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.759450" elapsed="1.006781"/>
+</kw>
+<kw name="Logout Is Visible" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:13.824468" level="INFO">Current page contains element '//ul//a[text()='Logout']'.</msg>
+<arg>//ul//a[text()='Logout']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.771064" elapsed="0.053616"/>
+</kw>
+<msg time="2025-10-22T15:26:13.824941" level="INFO">Logout link is visible</msg>
+<status status="PASS" start="2025-10-22T15:26:13.767075" elapsed="0.057966"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.826453" elapsed="2.493578"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.705468" elapsed="39.614690"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.300743" elapsed="40.021159"/>
+</suite>
+<suite id="s1-s4" name="TC 004 Login DDT" source="E:\POC_Project2\TestCases\TC_004_Login_DDT.robot">
+<test id="s1-s4-t1" name="Login With Multiple Credentials" line="13">
+<kw name="Perform Login">
+<kw name="Open Application">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.717970" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.715707" elapsed="0.002403"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.719434" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.718702" elapsed="0.000835"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.720688" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.720091" elapsed="22.266320"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:59.033719" elapsed="0.491920"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:00.655322" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:59.526275" elapsed="1.185216"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.714224" elapsed="24.096365"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:00.823293" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:00.811355" elapsed="2.148878"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:02.961522" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:02.960848" elapsed="1.864466"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:04.832199" level="INFO">Typing text 'user1@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-10-22T15:26:04.826637" elapsed="3.655209"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.482816" level="INFO">Typing text 'Pass@123' into text field 'id=input-password'.</msg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.482281" elapsed="1.148741"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.634289" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.631892" elapsed="0.848112"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:11.483394" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:10.480366" elapsed="1.003789"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:11.485682" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:11.484872" elapsed="0.757176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.246774" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.244489" elapsed="1.002475"/>
+</kw>
+<kw name="Logout Is Visible" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:13.291135" level="INFO">Current page contains element '//ul//a[text()='Logout']'.</msg>
+<arg>//ul//a[text()='Logout']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.248155" elapsed="0.043435"/>
+</kw>
+<msg time="2025-10-22T15:26:13.291799" level="INFO">Logout link is visible</msg>
+<status status="PASS" start="2025-10-22T15:26:13.247215" elapsed="0.044696"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.292313" elapsed="2.895192"/>
+</kw>
+<arg>user1@xyz.com</arg>
+<arg>Pass@123</arg>
+<status status="PASS" start="2025-10-22T15:25:36.713383" elapsed="39.474276"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Open Application">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:16.190269" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:26:16.189924" elapsed="0.000390"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:16.190642" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:26:16.190448" elapsed="0.000228"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:16.191190" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:26:16.190855" elapsed="9.349680"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:26:25.544435" elapsed="0.253640"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:26.802847" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:25.798628" elapsed="1.004862"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:16.189590" elapsed="10.614674"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:26.818308" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:26.815326" elapsed="1.074093"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:27.891990" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:27.890031" elapsed="2.296124"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:30.188173" level="INFO">Typing text 'user2@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-10-22T15:26:30.186794" elapsed="1.655897"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:31.843759" level="INFO">Typing text 'Abc@123' into text field 'id=input-password'.</msg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-10-22T15:26:31.843119" elapsed="1.541284"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:33.385186" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:33.384738" elapsed="0.938029"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:35.324411" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:34.323250" elapsed="1.001380"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:35.325408" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:35.325044" elapsed="0.172081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:36.498771" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:35.497466" elapsed="1.001624"/>
+</kw>
+<kw name="Logout Is Visible" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:36.532485" level="INFO">Current page contains element '//ul//a[text()='Logout']'.</msg>
+<arg>//ul//a[text()='Logout']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:36.501639" elapsed="0.030956"/>
+</kw>
+<msg time="2025-10-22T15:26:36.532689" level="INFO">Logout link is visible</msg>
+<status status="PASS" start="2025-10-22T15:26:36.499646" elapsed="0.033094"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:36.532890" elapsed="2.377727"/>
+</kw>
+<arg>user2@xyz.com</arg>
+<arg>Abc@123</arg>
+<status status="PASS" start="2025-10-22T15:26:16.188903" elapsed="22.721993"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Open Application">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:38.912781" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:26:38.912450" elapsed="0.000403"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:38.913315" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:26:38.913064" elapsed="0.000289"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:38.913797" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:26:38.913510" elapsed="3.761587"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:26:42.675331" elapsed="0.038431"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:43.715503" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:42.714468" elapsed="1.001170"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:38.912014" elapsed="4.803748"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:43.716142" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:43.715904" elapsed="0.079600"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:43.796239" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:43.795804" elapsed="0.409918"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:44.207237" level="INFO">Typing text 'user3@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-10-22T15:26:44.206238" elapsed="0.244246"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:44.451443" level="INFO">Typing text 'Test@456' into text field 'id=input-password'.</msg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-10-22T15:26:44.450787" elapsed="0.132267"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:44.584633" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:44.583828" elapsed="0.559113"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:46.144981" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:45.143614" elapsed="1.001521"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:46.145658" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:46.145376" elapsed="0.047008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:47.193461" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:46.192598" elapsed="1.000982"/>
+</kw>
+<kw name="Logout Is Visible" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:47.206373" level="INFO">Current page contains element '//ul//a[text()='Logout']'.</msg>
+<arg>//ul//a[text()='Logout']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:47.193959" elapsed="0.012503"/>
+</kw>
+<msg time="2025-10-22T15:26:47.206538" level="INFO">Logout link is visible</msg>
+<status status="PASS" start="2025-10-22T15:26:47.193728" elapsed="0.012853"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:47.206701" elapsed="2.262081"/>
+</kw>
+<arg>user3@xyz.com</arg>
+<arg>Test@456</arg>
+<status status="PASS" start="2025-10-22T15:26:38.911315" elapsed="10.558095"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.712066" elapsed="72.759608"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.317055" elapsed="73.159309"/>
+</suite>
+<suite id="s1-s5" name="TC 005 Add To Cart" source="E:\POC_Project2\TestCases\TC_005_Add_To_Cart.robot">
+<test id="s1-s5-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.609797" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.609068" elapsed="0.000812"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.610601" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.610220" elapsed="0.000436"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.611309" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.610897" elapsed="26.453640"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:26:03.075113" elapsed="0.203638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:04.294790" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:03.280093" elapsed="1.015111"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.607562" elapsed="27.696154"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:04.349154" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:26:04.348201" elapsed="0.001083"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:04.350197" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:26:04.349642" elapsed="0.000660"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:04.351686" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:04.350701" elapsed="4.012393"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:09.372327" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:08.363669" elapsed="1.008986"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:09.376128" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.373519" elapsed="1.357749"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:10.733409" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:10.732050" elapsed="1.175735"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:11.911118" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:11.908306" elapsed="0.763639"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:12.673074" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:12.672351" elapsed="1.088493"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:14.762513" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.761269" elapsed="1.001545"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:04.325000" elapsed="10.438148"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:17.766180" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:14.763482" elapsed="3.003296"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:17.784384" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:17.782427" elapsed="4.018245"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:22.852932" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:21.801222" elapsed="1.054009"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:22.939803" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:22.855967" elapsed="4.185889"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:27.044062" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:27.042367" elapsed="3.055416"/>
+</kw>
+<kw name="Click Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:30.099003" level="INFO">Clicking element '//a[@title='Shopping Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:30.098426" elapsed="2.665356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:33.775730" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.764257" elapsed="1.011863"/>
+</kw>
+<kw name="Iphone Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:36.485732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="20251022_152532-4-selenium-screenshot-1.png"&gt;&lt;img src="20251022_152532-4-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-22T15:26:36.489202" level="FAIL">Page should have contained element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']' but did not.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-10-22T15:26:33.783578" elapsed="2.754657">Page should have contained element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']' but did not.</status>
+</kw>
+<msg time="2025-10-22T15:26:36.541243" level="WARN">Iphone is not added to Cart</msg>
+<msg time="2025-10-22T15:26:36.543447" level="INFO">Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\POC_Project2\TestCases\TC_005_Add_To_Cart.robot:20
+    T:  User Login In    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\POC_Project2\TestCases\TC_005_Add_To_Cart.robot:29
+      Iphone Is Visible In Cart    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\POC_Project2\TestCases\TC_005_Add_To_Cart.robot:29
+      Page Should Contain Element    //h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']
+______________________________________________________________________________</msg>
+<status status="PASS" start="2025-10-22T15:26:33.776585" elapsed="2.767663"/>
+</kw>
+<kw name="Macbook Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:36.633587" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:36.548021" elapsed="0.086918"/>
+</kw>
+<msg time="2025-10-22T15:26:36.635684" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:36.545243" elapsed="0.090769"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:36.639524" elapsed="2.307353"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.606495" elapsed="62.340506"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.126356" elapsed="62.821900"/>
+</suite>
+<suite id="s1-s6" name="TC 006 Add To Wishlist" source="E:\POC_Project2\TestCases\TC_006_Add_To_Wishlist.robot">
+<test id="s1-s6-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.597353" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.596730" elapsed="0.000698"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.597971" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.597685" elapsed="0.000344"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.598718" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.598270" elapsed="5.393237"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:41.992056" elapsed="16.878078"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:59.926647" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.870661" elapsed="1.361633"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.595391" elapsed="23.678853"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.825249" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:26:00.823680" elapsed="0.001684"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.837871" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:26:00.836113" elapsed="0.002085"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:00.871984" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:00.866763" elapsed="1.952851"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.936227" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.826855" elapsed="1.112616"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.963519" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.962448" elapsed="4.409300"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.377046" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.372259" elapsed="1.399691"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.773019" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:09.772401" elapsed="1.139078"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:10.913274" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:10.912137" elapsed="1.404655"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.318525" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.317193" elapsed="1.002198"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:00.808322" elapsed="12.512289"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.325533" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.322696" elapsed="3.002942"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:16.325999" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.325821" elapsed="0.818255"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:18.385626" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:17.144582" elapsed="1.310781"/>
+</kw>
+<kw name="Add Iphone To Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:18.546449" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//button[@data-original-title='Add to Wish List']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:18.537723" elapsed="3.390926"/>
+</kw>
+<kw name="Add Macbook To Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:21.932085" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//button[@data-original-title='Add to Wish List']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:21.929490" elapsed="4.045721"/>
+</kw>
+<kw name="Click Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:25.976158" level="INFO">Clicking element 'id=wishlist-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:25.975674" elapsed="3.888899"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:30.876761" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:29.865014" elapsed="1.012058"/>
+</kw>
+<kw name="Iphone Is Visible In Wishlist" owner="AddToWishlistPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:31.269320" level="INFO">Current page contains element '//h2[contains(text(),'My Wish List')]/..//a[text()='iPhone']'.</msg>
+<arg>//h2[contains(text(),'My Wish List')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:30.883793" elapsed="0.385785"/>
+</kw>
+<msg time="2025-10-22T15:26:31.270322" level="INFO">Iphone is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:30.877939" elapsed="0.392995"/>
+</kw>
+<kw name="Macbook Is Visible In Wishlist" owner="AddToWishlistPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:31.524865" level="INFO">Current page contains element '//h2[contains(text(),'My Wish List')]/..//a[text()='MacBook']'.</msg>
+<arg>//h2[contains(text(),'My Wish List')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.273346" elapsed="0.251813"/>
+</kw>
+<msg time="2025-10-22T15:26:31.525392" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:31.272048" elapsed="0.253483"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.528429" elapsed="6.012939"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.594392" elapsed="60.947376"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.108558" elapsed="61.436069"/>
+</suite>
+<suite id="s1-s7" name="TC 007 Add To Cart Through Wishlist" source="E:\POC_Project2\TestCases\TC_007_Add_To_Cart_Through_Wishlist.robot">
+<test id="s1-s7-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.510772" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.510091" elapsed="0.000769"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.511518" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.511173" elapsed="0.000397"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.512350" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.511904" elapsed="19.809857"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:56.489562" elapsed="0.436893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:58.016406" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:56.926858" elapsed="1.089993"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.508695" elapsed="21.564972"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:58.368362" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:58.339112" elapsed="0.029468"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:58.387476" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:58.370563" elapsed="0.017032"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:58.388932" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:58.388031" elapsed="4.572573"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.962228" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.961273" elapsed="1.001275"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.963490" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.962951" elapsed="2.578351"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:06.543420" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:06.541987" elapsed="1.921009"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.464041" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.463468" elapsed="1.310061"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.774324" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.773946" elapsed="2.545198"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.323589" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.319757" elapsed="1.004626"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:58.194704" elapsed="15.130270"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.326540" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.325618" elapsed="3.001085"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:16.327137" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.326902" elapsed="0.826130"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:18.209425" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:17.153572" elapsed="1.056528"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:18.213556" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:18.210947" elapsed="3.937661"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:22.149775" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:22.149167" elapsed="3.862251"/>
+</kw>
+<kw name="Click Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:26.012386" level="INFO">Clicking element '//a[@title='Shopping Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:26.011853" elapsed="16.915176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:43.928097" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:42.927385" elapsed="1.000836"/>
+</kw>
+<kw name="Iphone Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:43.948821" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:43.929000" elapsed="0.019926"/>
+</kw>
+<msg time="2025-10-22T15:26:43.949118" level="INFO">Iphone is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:43.928458" elapsed="0.020774"/>
+</kw>
+<kw name="Macbook Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:43.962835" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:43.949679" elapsed="0.013250"/>
+</kw>
+<msg time="2025-10-22T15:26:43.963012" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:43.949370" elapsed="0.013688"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:43.963590" elapsed="2.283651"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.507670" elapsed="69.739695"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.049838" elapsed="70.198905"/>
+</suite>
+<suite id="s1-s8" name="TC 008 Remove Product From Cart" source="E:\POC_Project2\TestCases\TC_008_Remove_Product_From_Cart.robot">
+<test id="s1-s8-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.707325" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.706353" elapsed="0.001067"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.708279" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.707811" elapsed="0.000547"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.710140" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.708894" elapsed="18.493224"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:55.332223" elapsed="0.522766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:57.088342" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:55.855628" elapsed="1.574115"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.704718" elapsed="20.847711"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:57.669621" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:57.668531" elapsed="0.001254"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:57.676065" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:57.670141" elapsed="0.006729"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:57.684742" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:57.678885" elapsed="3.484377"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:02.253422" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:01.163815" elapsed="1.090982"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:02.363602" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:02.255374" elapsed="2.443165"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:04.699540" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:04.698904" elapsed="3.637559"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.337434" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.336883" elapsed="1.107468"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.445747" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.444781" elapsed="1.497172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:11.943844" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:10.942467" elapsed="1.001989"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:57.665662" elapsed="14.279207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:14.946557" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:11.945246" elapsed="3.001432"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:14.947093" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:14.946851" elapsed="0.577177"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.525839" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:15.524516" elapsed="1.001570"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:16.530164" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.526511" elapsed="1.131056"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:17.658283" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:17.657873" elapsed="2.508315"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:21.180565" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:20.166810" elapsed="1.036032"/>
+</kw>
+<kw name="Click Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:21.205341" level="INFO">Clicking element '//a[@title='Shopping Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:21.204888" elapsed="4.757136"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:26.964040" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:25.962549" elapsed="1.026770"/>
+</kw>
+<kw name="Iphone Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:27.343375" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:26.997826" elapsed="0.346408"/>
+</kw>
+<msg time="2025-10-22T15:26:27.344581" level="INFO">Iphone is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:26.990184" elapsed="0.354557"/>
+</kw>
+<kw name="Macbook Is Visible In Cart" owner="AddToCartPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:27.776549" level="INFO">Current page contains element '//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']'.</msg>
+<arg>//h1[contains(text(),'Shopping Cart')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:27.346010" elapsed="0.431232"/>
+</kw>
+<msg time="2025-10-22T15:26:27.777719" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:27.345277" elapsed="0.432870"/>
+</kw>
+<kw name="Remove Iphone From Cart" owner="AddToCartPage">
+<msg time="2025-10-22T15:26:27.779622" level="INFO">Clicking element '//a[text()='iPhone']//..//..//button[@data-original-title='Remove']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:27.778608" elapsed="2.791174"/>
+</kw>
+<kw name="Remove Macbook From Cart" owner="AddToCartPage">
+<msg time="2025-10-22T15:26:30.574278" level="INFO">Clicking element '//a[text()='MacBook']//..//..//button[@data-original-title='Remove']'.</msg>
+<msg time="2025-10-22T15:26:31.658086" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</msg>
+<status status="FAIL" start="2025-10-22T15:26:30.570762" elapsed="1.614057">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-22T15:26:32.191815" elapsed="0.000567"/>
+</kw>
+<kw name="Check If Cart Is Empty" owner="AddToCartPage">
+<status status="NOT RUN" start="2025-10-22T15:26:32.205143" elapsed="0.000302"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.240956" elapsed="5.330926"/>
+</kw>
+<status status="FAIL" start="2025-10-22T15:25:36.702643" elapsed="60.869498">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=141.0.7390.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff715dde8e5+80021]
+	GetHandleVerifier [0x0x7ff715dde940+80112]
+	(No symbol) [0x0x7ff715b6060f]
+	(No symbol) [0x0x7ff715b76e35]
+	(No symbol) [0x0x7ff715b75923]
+	(No symbol) [0x0x7ff715b68ea7]
+	(No symbol) [0x0x7ff715b66d80]
+	(No symbol) [0x0x7ff715b6b26f]
+	(No symbol) [0x0x7ff715b6b32f]
+	(No symbol) [0x0x7ff715bbaacd]
+	(No symbol) [0x0x7ff715bab733]
+	(No symbol) [0x0x7ff715be122a]
+	(No symbol) [0x0x7ff715bab056]
+	(No symbol) [0x0x7ff715be1440]
+	(No symbol) [0x0x7ff715c0968a]
+	(No symbol) [0x0x7ff715be1003]
+	(No symbol) [0x0x7ff715ba95d1]
+	(No symbol) [0x0x7ff715baa3f3]
+	GetHandleVerifier [0x0x7ff71609dc7d+2960429]
+	GetHandleVerifier [0x0x7ff716097f3a+2936554]
+	GetHandleVerifier [0x0x7ff7160b8977+3070247]
+	GetHandleVerifier [0x0x7ff715df83ce+185214]
+	GetHandleVerifier [0x0x7ff715dffe1f+216527]
+	GetHandleVerifier [0x0x7ff715de7b24+117460]
+	GetHandleVerifier [0x0x7ff715de7cdf+117903]
+	GetHandleVerifier [0x0x7ff715dcdbb8+11112]
+	BaseThreadInitThunk [0x0x7ffffa77e8d7+23]
+	RtlUserThreadStart [0x0x7ffffbf28d9c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-22T15:25:36.246160" elapsed="61.328815"/>
+</suite>
+<suite id="s1-s9" name="TC 009 Add To Cart Quck Access" source="E:\POC_Project2\TestCases\TC_009_Add_To_Cart_Quck_Access.robot">
+<test id="s1-s9-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.582528" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.581819" elapsed="0.000787"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.583178" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.582887" elapsed="0.000346"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.583975" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.583500" elapsed="22.260434"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.918499" elapsed="0.300498"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:00.221201" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:59.219484" elapsed="1.002129"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.580297" elapsed="23.641711"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.405876" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:26:00.284992" elapsed="0.122273"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.427744" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:26:00.414251" elapsed="0.013596"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:00.430742" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:00.429197" elapsed="2.417141"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.873863" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.847816" elapsed="1.029944"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.880788" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.879836" elapsed="4.537816"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.420474" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.418540" elapsed="1.325439"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.746054" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:09.744663" elapsed="1.028297"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:10.774069" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:10.773470" elapsed="1.643129"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.428173" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.417000" elapsed="1.011446"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:00.257001" elapsed="13.177203"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.436006" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.434846" elapsed="3.001615"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:16.438044" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.437485" elapsed="2.164620"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:19.916776" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:18.602492" elapsed="1.314956"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:19.966942" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:19.918138" elapsed="3.832320"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:23.754642" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:23.751100" elapsed="4.036389"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:28.790494" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:27.787957" elapsed="1.005179"/>
+</kw>
+<kw name="Click Quick Access Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:28.795559" level="INFO">Clicking element 'id=cart-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:28.794353" elapsed="2.379514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:32.183690" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.174574" elapsed="1.010257"/>
+</kw>
+<kw name="Iphone In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:32.868126" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='iPhone']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.231878" elapsed="0.636469"/>
+</kw>
+<msg time="2025-10-22T15:26:32.868534" level="INFO">Iphone is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:32.204512" elapsed="0.664128"/>
+</kw>
+<kw name="Macbook In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:32.975772" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='MacBook']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.870336" elapsed="0.105659"/>
+</kw>
+<msg time="2025-10-22T15:26:32.976313" level="INFO">Macbook is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:32.868923" elapsed="0.107708"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.977953" elapsed="4.659491"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.579317" elapsed="61.058457"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.184476" elapsed="61.456508"/>
+</suite>
+<suite id="s1-s10" name="TC 010 Remove Product From Quick Access Cart" source="E:\POC_Project2\TestCases\TC_010_Remove_Product_From_Quick_Access_Cart.robot">
+<test id="s1-s10-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.691876" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.691019" elapsed="0.000941"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.692632" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.692267" elapsed="0.000422"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.693562" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.693033" elapsed="20.126813"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:57.691791" elapsed="0.657962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:59.388599" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.350166" elapsed="1.038937"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.689277" elapsed="22.734291"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.461674" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:59.441567" elapsed="0.020536"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.463502" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:59.462558" elapsed="0.001071"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:59.496742" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:59.476226" elapsed="2.993308"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.496056" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.470372" elapsed="1.026757"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.500054" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.498108" elapsed="1.678556"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:05.179012" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:05.177158" elapsed="3.235223"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.413742" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.413042" elapsed="1.028055"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.441992" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.441486" elapsed="1.471898"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:11.919775" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:10.915645" elapsed="1.004682"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:59.435988" elapsed="12.485226"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:14.922877" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:11.921601" elapsed="3.001495"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:14.923638" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:14.923386" elapsed="0.589477"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.515865" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:15.513565" elapsed="1.003094"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:16.518650" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.517294" elapsed="1.097543"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:17.616261" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:17.615311" elapsed="1.815786"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:20.471010" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:19.431482" elapsed="1.043338"/>
+</kw>
+<kw name="Click Quick Access Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:20.564472" level="INFO">Clicking element 'id=cart-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:20.543661" elapsed="4.053406"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:25.649775" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:24.597970" elapsed="1.052408"/>
+</kw>
+<kw name="Iphone In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:26.111716" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='iPhone']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:25.677733" elapsed="0.434293"/>
+</kw>
+<msg time="2025-10-22T15:26:26.112278" level="INFO">Iphone is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:25.672152" elapsed="0.440234"/>
+</kw>
+<kw name="Macbook In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:26.442743" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='MacBook']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:26.113428" elapsed="0.334821"/>
+</kw>
+<msg time="2025-10-22T15:26:26.449448" level="INFO">Macbook is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:26.112657" elapsed="0.365526"/>
+</kw>
+<kw name="Remove Iphone From Quick Access" owner="HomePage">
+<msg time="2025-10-22T15:26:26.629169" level="INFO">Clicking element '//div[@id='cart']//table//a[text()='iPhone']//../following-sibling::td/button[@title='Remove']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:26.580550" elapsed="2.767669"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:30.424905" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:29.348686" elapsed="1.080328"/>
+</kw>
+<kw name="Click Quick Access Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:30.439130" level="INFO">Clicking element 'id=cart-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:30.431504" elapsed="1.803199"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:33.240037" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.235134" elapsed="1.005290"/>
+</kw>
+<kw name="Remove Macbook From Quick Access" owner="HomePage">
+<msg time="2025-10-22T15:26:33.244025" level="INFO">Clicking element '//div[@id='cart']//table//a[text()='MacBook']//../following-sibling::td/button[@title='Remove']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:33.241011" elapsed="0.403232"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:34.645951" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:33.644658" elapsed="1.001523"/>
+</kw>
+<kw name="Click Quick Access Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:34.647157" level="INFO">Clicking element 'id=cart-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:34.646614" elapsed="0.274154"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:35.921729" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:34.921075" elapsed="1.000774"/>
+</kw>
+<kw name="Check If Quick Access Cart Is Empty" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:35.936005" level="INFO">Current page contains element '//p[text()='Your shopping cart is empty!']'.</msg>
+<arg>//p[text()='Your shopping cart is empty!']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:35.922336" elapsed="0.013781"/>
+</kw>
+<msg time="2025-10-22T15:26:35.936205" level="INFO">Quick Access Cart is empty</msg>
+<status status="PASS" start="2025-10-22T15:26:35.922037" elapsed="0.014217"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:35.936886" elapsed="2.204353"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.687892" elapsed="61.453598"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.216794" elapsed="61.927124"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 10 executions.</doc>
+<status status="FAIL" start="2025-10-22T15:25:36.017000" elapsed="73.461000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCases" id="s1" pass="9" fail="1" skip="0">TestCases</stat>
+<stat name="TC 001 Site Launch" id="s1-s1" pass="1" fail="0" skip="0">TestCases.TC 001 Site Launch</stat>
+<stat name="TC 002 Register User" id="s1-s2" pass="1" fail="0" skip="0">TestCases.TC 002 Register User</stat>
+<stat name="TC 003 Login" id="s1-s3" pass="1" fail="0" skip="0">TestCases.TC 003 Login</stat>
+<stat name="TC 004 Login DDT" id="s1-s4" pass="1" fail="0" skip="0">TestCases.TC 004 Login DDT</stat>
+<stat name="TC 005 Add To Cart" id="s1-s5" pass="1" fail="0" skip="0">TestCases.TC 005 Add To Cart</stat>
+<stat name="TC 006 Add To Wishlist" id="s1-s6" pass="1" fail="0" skip="0">TestCases.TC 006 Add To Wishlist</stat>
+<stat name="TC 007 Add To Cart Through Wishlist" id="s1-s7" pass="1" fail="0" skip="0">TestCases.TC 007 Add To Cart Through Wishlist</stat>
+<stat name="TC 008 Remove Product From Cart" id="s1-s8" pass="0" fail="1" skip="0">TestCases.TC 008 Remove Product From Cart</stat>
+<stat name="TC 009 Add To Cart Quck Access" id="s1-s9" pass="1" fail="0" skip="0">TestCases.TC 009 Add To Cart Quck Access</stat>
+<stat name="TC 010 Remove Product From Quick Access Cart" id="s1-s10" pass="1" fail="0" skip="0">TestCases.TC 010 Remove Product From Quick Access Cart</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-22T15:26:36.541243" level="WARN">Iphone is not added to Cart</msg>
+</errors>
+</robot>

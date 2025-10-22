@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-22T15:25:36.207129" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\POC_Project2\TestCases">
+<suite id="s1-s1" name="TC 003 Login" source="E:\POC_Project2\TestCases\TC_003_Login.robot">
+<test id="s1-s1-t1" name="User Login In" line="19">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.710322" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.708462" elapsed="0.001976"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.711278" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.710821" elapsed="0.000522"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.712187" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.711647" elapsed="20.034513"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:57.447446" elapsed="0.961729"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:59.448547" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.410623" elapsed="1.052617"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.706787" elapsed="22.761500"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.784995" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:25:59.691532" elapsed="0.095064"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:59.828916" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:25:59.790470" elapsed="0.038540"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:25:59.830694" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:25:59.829450" elapsed="2.863525"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.833367" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.705998" elapsed="1.128178"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.835208" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.834697" elapsed="2.061954"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:05.900368" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:05.897322" elapsed="2.584393"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.482805" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.482251" elapsed="1.183372"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.666902" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:09.666437" elapsed="1.541438"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:12.225952" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:11.209416" elapsed="1.024983"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:12.238855" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:12.237870" elapsed="0.521192"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.765661" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.759450" elapsed="1.006781"/>
+</kw>
+<kw name="Logout Is Visible" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:13.824468" level="INFO">Current page contains element '//ul//a[text()='Logout']'.</msg>
+<arg>//ul//a[text()='Logout']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.771064" elapsed="0.053616"/>
+</kw>
+<msg time="2025-10-22T15:26:13.824941" level="INFO">Logout link is visible</msg>
+<status status="PASS" start="2025-10-22T15:26:13.767075" elapsed="0.057966"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.826453" elapsed="2.493578"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.705468" elapsed="39.614690"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.300743" elapsed="40.021159"/>
+</suite>
+<status status="PASS" start="2025-10-22T15:25:36.258405" elapsed="40.065395"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCases" id="s1" pass="1" fail="0" skip="0">TestCases</stat>
+<stat name="TC 003 Login" id="s1-s1" pass="1" fail="0" skip="0">TestCases.TC 003 Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

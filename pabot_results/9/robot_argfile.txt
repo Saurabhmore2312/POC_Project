@@ -1,0 +1,16 @@
+--suite TestCases.TC 010 Remove Product From Quick Access Cart
+--variable CALLER_ID:32d1e9f93f5644ac9d160c5fe78d4b1c
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:9
+--variable PABOTLASTLEVEL:
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\9
+--consolecolors off
+--consolemarkers off
+TestCases/

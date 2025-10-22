@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-20T21:04:18.427179" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 002 Register User" source="E:\POC_Project2\TestCases\TC_002_Register_User.robot">
+<test id="s1-t1" name="User Registration With Random Data" line="16">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-20T21:04:18.647984" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-20T21:04:18.647399" elapsed="0.015376"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-20T21:04:18.663225" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-20T21:04:18.662989" elapsed="0.000310"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-20T21:04:18.663727" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-20T21:04:18.663458" elapsed="2.346088"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-20T21:04:21.009865" elapsed="0.037435"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.048883" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-20T21:04:21.047837" elapsed="3.001283"/>
+</kw>
+<status status="PASS" start="2025-10-20T21:04:18.646711" elapsed="5.402573"/>
+</kw>
+<kw name="Generate Test Data">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-20T21:04:24.050229" level="INFO">${USERNAME} = PPJIQglD</msg>
+<var>${USERNAME}</var>
+<arg>8</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.049903" elapsed="0.000401"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-20T21:04:24.050683" level="INFO">${LASTNAME} = VVuKQm</msg>
+<var>${LASTNAME}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.050440" elapsed="0.000308"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-20T21:04:24.051094" level="INFO">${RAND_EMAIL} = GrrmXB</msg>
+<var>${RAND_EMAIL}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.050873" elapsed="0.000286"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.051514" level="INFO">${EMAIL} = PPJIQglD_GrrmXB@example.com</msg>
+<var>${EMAIL}</var>
+<arg>${USERNAME}_${RAND_EMAIL}@example.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.051283" elapsed="0.000297"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-20T21:04:24.052065" level="INFO">${PASSWORD} = so8WIOqJro</msg>
+<var>${PASSWORD}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.051700" elapsed="0.000432"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-20T21:04:24.052486" level="INFO">${PHONE} = 1745245529</msg>
+<var>${PHONE}</var>
+<arg>10</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.052258" elapsed="0.000298"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.052898" level="INFO">${USERNAME} = PPJIQglD</msg>
+<arg>${USERNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.052691" elapsed="0.000285"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.053290" level="INFO">${LASTNAME} = VVuKQm</msg>
+<arg>${LASTNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.053100" elapsed="0.000264"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.053645" level="INFO">${EMAIL} = PPJIQglD_GrrmXB@example.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.053479" elapsed="0.000238"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.053998" level="INFO">${PASSWORD} = so8WIOqJro</msg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.053828" elapsed="0.000241"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-10-20T21:04:24.054340" level="INFO">${PHONE} = 1745245529</msg>
+<arg>${PHONE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.054179" elapsed="0.000235"/>
+</kw>
+<status status="PASS" start="2025-10-20T21:04:24.049568" elapsed="0.004928"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-20T21:04:24.062698" level="INFO">Page title is 'Your Store'.</msg>
+<arg>Your Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.054610" elapsed="0.008290"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-20T21:04:24.063659" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-20T21:04:24.063370" elapsed="0.066635"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-20T21:04:26.131010" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-20T21:04:24.130316" elapsed="2.001281"/>
+</kw>
+<kw name="Click Register" owner="HomePage">
+<msg time="2025-10-20T21:04:26.132792" level="INFO">Clicking element '//a[text()='Register']'.</msg>
+<status status="PASS" start="2025-10-20T21:04:26.132204" elapsed="0.433142"/>
+</kw>
+<kw name="Enter Firstname" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:26.565762" level="INFO">Typing text 'PPJIQglD' into text field 'id=input-firstname'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-20T21:04:26.565542" elapsed="0.132128"/>
+</kw>
+<kw name="Enter Lastname" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:26.698224" level="INFO">Typing text 'VVuKQm' into text field 'id=input-lastname'.</msg>
+<arg>${LASTNAME}</arg>
+<status status="PASS" start="2025-10-20T21:04:26.697979" elapsed="0.150842"/>
+</kw>
+<kw name="Enter Email" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:26.849355" level="INFO">Typing text 'PPJIQglD_GrrmXB@example.com' into text field 'id=input-email'.</msg>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2025-10-20T21:04:26.849087" elapsed="0.096211"/>
+</kw>
+<kw name="Enter Phone Number" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:26.945888" level="INFO">Typing text '1745245529' into text field 'id=input-telephone'.</msg>
+<arg>${PHONE}</arg>
+<status status="PASS" start="2025-10-20T21:04:26.945587" elapsed="0.074290"/>
+</kw>
+<kw name="Enter Password" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:27.020939" level="INFO">Typing text 'so8WIOqJro' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-20T21:04:27.020441" elapsed="0.093360"/>
+</kw>
+<kw name="Enter Cfm Password" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:27.114359" level="INFO">Typing text 'so8WIOqJro' into text field 'id=input-confirm'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-20T21:04:27.114085" elapsed="0.085536"/>
+</kw>
+<kw name="Click Agree" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:27.200006" level="INFO">Clicking element '//input[@name='agree']'.</msg>
+<status status="PASS" start="2025-10-20T21:04:27.199839" elapsed="0.072754"/>
+</kw>
+<kw name="Click Continue" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:27.273160" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-20T21:04:27.272908" elapsed="0.709577"/>
+</kw>
+<kw name="Get Confirmation Message" owner="AccountRegisterPage">
+<msg time="2025-10-20T21:04:28.022130" level="INFO">${msg} = Your Account Has Been Created!</msg>
+<var>${msg}</var>
+<status status="PASS" start="2025-10-20T21:04:27.982747" elapsed="0.039513"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Your Account Has Been Created!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-20T21:04:28.022466" elapsed="0.000271"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-20T21:04:28.022958" elapsed="2.247572"/>
+</kw>
+<status status="PASS" start="2025-10-20T21:04:18.646068" elapsed="11.624952"/>
+</test>
+<status status="PASS" start="2025-10-20T21:04:18.436269" elapsed="11.837176"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC 002 Register User" id="s1" pass="1" fail="0" skip="0">TC 002 Register User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

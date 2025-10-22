@@ -1,0 +1,16 @@
+--suite TestCases.TC 008 Remove Product From Cart
+--variable CALLER_ID:b811ea74d988471881c48b8055021551
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:5
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:7
+--variable PABOTLASTLEVEL:TestCases.TC 008 Remove Product From Cart
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\7
+--consolecolors off
+--consolemarkers off
+TestCases/

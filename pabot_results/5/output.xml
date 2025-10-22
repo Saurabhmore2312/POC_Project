@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-22T15:25:36.009573" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\POC_Project2\TestCases">
+<suite id="s1-s1" name="TC 006 Add To Wishlist" source="E:\POC_Project2\TestCases\TC_006_Add_To_Wishlist.robot">
+<test id="s1-s1-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.597353" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.596730" elapsed="0.000698"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.597971" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.597685" elapsed="0.000344"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.598718" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.598270" elapsed="5.393237"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:41.992056" elapsed="16.878078"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:25:59.926647" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.870661" elapsed="1.361633"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.595391" elapsed="23.678853"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.825249" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:26:00.823680" elapsed="0.001684"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.837871" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:26:00.836113" elapsed="0.002085"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:00.871984" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:00.866763" elapsed="1.952851"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.936227" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.826855" elapsed="1.112616"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.963519" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.962448" elapsed="4.409300"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.377046" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.372259" elapsed="1.399691"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.773019" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:09.772401" elapsed="1.139078"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:10.913274" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:10.912137" elapsed="1.404655"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.318525" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.317193" elapsed="1.002198"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:00.808322" elapsed="12.512289"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.325533" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.322696" elapsed="3.002942"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:16.325999" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.325821" elapsed="0.818255"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:18.385626" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:17.144582" elapsed="1.310781"/>
+</kw>
+<kw name="Add Iphone To Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:18.546449" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//button[@data-original-title='Add to Wish List']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:18.537723" elapsed="3.390926"/>
+</kw>
+<kw name="Add Macbook To Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:21.932085" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//button[@data-original-title='Add to Wish List']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:21.929490" elapsed="4.045721"/>
+</kw>
+<kw name="Click Wishlist" owner="HomePage">
+<msg time="2025-10-22T15:26:25.976158" level="INFO">Clicking element 'id=wishlist-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:25.975674" elapsed="3.888899"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:30.876761" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:29.865014" elapsed="1.012058"/>
+</kw>
+<kw name="Iphone Is Visible In Wishlist" owner="AddToWishlistPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:31.269320" level="INFO">Current page contains element '//h2[contains(text(),'My Wish List')]/..//a[text()='iPhone']'.</msg>
+<arg>//h2[contains(text(),'My Wish List')]/..//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:30.883793" elapsed="0.385785"/>
+</kw>
+<msg time="2025-10-22T15:26:31.270322" level="INFO">Iphone is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:30.877939" elapsed="0.392995"/>
+</kw>
+<kw name="Macbook Is Visible In Wishlist" owner="AddToWishlistPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:31.524865" level="INFO">Current page contains element '//h2[contains(text(),'My Wish List')]/..//a[text()='MacBook']'.</msg>
+<arg>//h2[contains(text(),'My Wish List')]/..//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.273346" elapsed="0.251813"/>
+</kw>
+<msg time="2025-10-22T15:26:31.525392" level="INFO">Macbook is added to Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:31.272048" elapsed="0.253483"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.528429" elapsed="6.012939"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.594392" elapsed="60.947376"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.108558" elapsed="61.436069"/>
+</suite>
+<status status="PASS" start="2025-10-22T15:25:36.061473" elapsed="61.484776"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCases" id="s1" pass="1" fail="0" skip="0">TestCases</stat>
+<stat name="TC 006 Add To Wishlist" id="s1-s1" pass="1" fail="0" skip="0">TestCases.TC 006 Add To Wishlist</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+--suite TestCases.TC 002 Register User
+--variable CALLER_ID:0f086708e6c444e5bb5db2378577ce41
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:8
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:TestCases.TC 002 Register User
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\1
+--consolecolors off
+--consolemarkers off
+TestCases/

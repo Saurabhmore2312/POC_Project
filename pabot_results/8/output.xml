@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-22T15:25:36.126159" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="E:\POC_Project2\TestCases">
+<suite id="s1-s1" name="TC 009 Add To Cart Quck Access" source="E:\POC_Project2\TestCases\TC_009_Add_To_Cart_Quck_Access.robot">
+<test id="s1-s1-t1" name="User Login In" line="20">
+<kw name="Open Application" type="SETUP">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.582528" level="INFO">${URL} = https://naveenautomationlabs.com/opencart/</msg>
+<var>${URL}</var>
+<arg>appURL</arg>
+<status status="PASS" start="2025-10-22T15:25:36.581819" elapsed="0.000787"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:25:36.583178" level="INFO">${BROWSER} = chrome</msg>
+<var>${BROWSER}</var>
+<arg>browser</arg>
+<status status="PASS" start="2025-10-22T15:25:36.582887" elapsed="0.000346"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:25:36.583975" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T15:25:36.583500" elapsed="22.260434"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-22T15:25:58.918499" elapsed="0.300498"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:00.221201" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:25:59.219484" elapsed="1.002129"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.580297" elapsed="23.641711"/>
+</kw>
+<kw name="Peform Login">
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.405876" level="INFO">${USERNAME} = user@xyz.com</msg>
+<var>${USERNAME}</var>
+<arg>username</arg>
+<status status="PASS" start="2025-10-22T15:26:00.284992" elapsed="0.122273"/>
+</kw>
+<kw name="Fetch Property" owner="BaseClass">
+<msg time="2025-10-22T15:26:00.427744" level="INFO">${PASSWORD} = User@123</msg>
+<var>${PASSWORD}</var>
+<arg>password</arg>
+<status status="PASS" start="2025-10-22T15:26:00.414251" elapsed="0.013596"/>
+</kw>
+<kw name="Click Account" owner="HomePage">
+<msg time="2025-10-22T15:26:00.430742" level="INFO">Clicking element '//span[text()='My Account']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:00.429197" elapsed="2.417141"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:03.873863" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:02.847816" elapsed="1.029944"/>
+</kw>
+<kw name="Click Login" owner="HomePage">
+<msg time="2025-10-22T15:26:03.880788" level="INFO">Clicking element '//ul//a[text()='Login']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:03.879836" elapsed="4.537816"/>
+</kw>
+<kw name="Enter Login Email" owner="LoginPage">
+<msg time="2025-10-22T15:26:08.420474" level="INFO">Typing text 'user@xyz.com' into text field 'id=input-email'.</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-10-22T15:26:08.418540" elapsed="1.325439"/>
+</kw>
+<kw name="Enter Login Password" owner="LoginPage">
+<msg time="2025-10-22T15:26:09.746054" level="INFO">Typing text 'User@123' into text field 'id=input-password'.</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-10-22T15:26:09.744663" elapsed="1.028297"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<msg time="2025-10-22T15:26:10.774069" level="INFO">Clicking element '//input[@type='submit']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:10.773470" elapsed="1.643129"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:13.428173" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:12.417000" elapsed="1.011446"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:26:00.257001" elapsed="13.177203"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:16.436006" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:13.434846" elapsed="3.001615"/>
+</kw>
+<kw name="Click Logo" owner="HomePage">
+<msg time="2025-10-22T15:26:16.438044" level="INFO">Clicking element '//div[@id='logo']/a/img'.</msg>
+<status status="PASS" start="2025-10-22T15:26:16.437485" elapsed="2.164620"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:19.916776" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:18.602492" elapsed="1.314956"/>
+</kw>
+<kw name="Add Iphone To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:19.966942" level="INFO">Clicking element '//a[text()='iPhone']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:19.918138" elapsed="3.832320"/>
+</kw>
+<kw name="Add Macbook To Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:23.754642" level="INFO">Clicking element '//a[text()='MacBook']//..//../following-sibling::div//span[text()='Add to Cart']'.</msg>
+<status status="PASS" start="2025-10-22T15:26:23.751100" elapsed="4.036389"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:28.790494" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:27.787957" elapsed="1.005179"/>
+</kw>
+<kw name="Click Quick Access Cart" owner="HomePage">
+<msg time="2025-10-22T15:26:28.795559" level="INFO">Clicking element 'id=cart-total'.</msg>
+<status status="PASS" start="2025-10-22T15:26:28.794353" elapsed="2.379514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-22T15:26:32.183690" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-22T15:26:31.174574" elapsed="1.010257"/>
+</kw>
+<kw name="Iphone In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:32.868126" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='iPhone']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='iPhone']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.231878" elapsed="0.636469"/>
+</kw>
+<msg time="2025-10-22T15:26:32.868534" level="INFO">Iphone is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:32.204512" elapsed="0.664128"/>
+</kw>
+<kw name="Macbook In Quick Access Tab" owner="HomePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T15:26:32.975772" level="INFO">Current page contains element '//div[@id='cart']//table//a[text()='MacBook']'.</msg>
+<arg>//div[@id='cart']//table//a[text()='MacBook']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.870336" elapsed="0.105659"/>
+</kw>
+<msg time="2025-10-22T15:26:32.976313" level="INFO">Macbook is visible in Quick Access Cart</msg>
+<status status="PASS" start="2025-10-22T15:26:32.868923" elapsed="0.107708"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T15:26:32.977953" elapsed="4.659491"/>
+</kw>
+<status status="PASS" start="2025-10-22T15:25:36.579317" elapsed="61.058457"/>
+</test>
+<status status="PASS" start="2025-10-22T15:25:36.184476" elapsed="61.456508"/>
+</suite>
+<status status="PASS" start="2025-10-22T15:25:36.155243" elapsed="61.488239"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCases" id="s1" pass="1" fail="0" skip="0">TestCases</stat>
+<stat name="TC 009 Add To Cart Quck Access" id="s1-s1" pass="1" fail="0" skip="0">TestCases.TC 009 Add To Cart Quck Access</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

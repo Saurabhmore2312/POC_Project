@@ -1,0 +1,16 @@
+--suite TestCases.TC 005 Add To Cart
+--variable CALLER_ID:5cbc7f01f32c44a4a62756345354379c
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:4
+--variable PABOTLASTLEVEL:TestCases.TC 005 Add To Cart
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\4
+--consolecolors off
+--consolemarkers off
+TestCases/

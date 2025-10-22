@@ -1,0 +1,16 @@
+--suite TestCases.TC 009 Add To Cart Quck Access
+--variable CALLER_ID:4bd35f4be165405bbb602f328d8458d1
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:4
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:10
+--variable PABOTQUEUEINDEX:8
+--variable PABOTLASTLEVEL:TestCases.TC 009 Add To Cart Quck Access
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\8
+--consolecolors off
+--consolemarkers off
+TestCases/
